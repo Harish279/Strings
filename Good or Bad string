@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    char ch[200];
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        int vow=0,con=0,flag=0;
+        cin>>ch;
+        for(int i=0;ch[i]!='\0';i++)
+        {
+            if(ch[i]=='a' || ch[i]=='e' || ch[i]=='i' || ch[i]=='o' || ch[i]=='u')
+                {
+                    vow++;
+                    con=0;
+                }
+            else
+                if(ch[i]=='?')
+                    {
+                        vow++;
+                        con++;
+                    }
+            else
+            {
+                con++;
+                vow=0;
+            }
+            
+            if(vow>5 || con>3)
+                {
+                    flag=1;
+                    break;
+                }
+                
+        }
+        if(flag==1)
+            cout<<"0\n";
+        else
+            cout<<"1\n";
+        
+        
+    }
+	//code
+	return 0;
+}
