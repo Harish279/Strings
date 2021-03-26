@@ -1,0 +1,18 @@
+class Solution{
+    public:
+    bool isSubSequence(string A, string B) 
+    {
+        int j=0;
+        for(int i=0;i<B.length();i++)
+        {
+            if(A[j]==B[i])
+                j++;
+            
+        }
+        if(j==A.length())
+            return true;
+        else
+            return false;
+        // code here
+    }
+};
